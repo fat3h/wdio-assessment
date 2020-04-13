@@ -12,7 +12,6 @@ describe('Account creation', () => {
         HomePage.open;
         expect(HomePage.title).to.include('My Store');
         HomePage.signInButton.click();
-        // HomePage.clickOnSignInButton;
     });
     
     it('enters the email address in the Sign In page', () => {
