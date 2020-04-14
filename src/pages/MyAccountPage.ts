@@ -5,7 +5,11 @@ class MyAccountPage {
     }
 
     get pageHeading() {
-        return $('#center_column > h1').getText();
+        return $('#center_column > h1');
+    }
+
+    get readPageHeading() {
+        return this.pageHeading.getText();
     }
 
 }

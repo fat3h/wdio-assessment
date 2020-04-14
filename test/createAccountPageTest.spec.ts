@@ -10,7 +10,8 @@ let chance = new Chance();
 describe('Account creation', () => {
     it('launches the home page and clicks on the Sign In button', () => {
         HomePage.open;
-        expect(HomePage.title).to.include('My Store');
+        expect(HomePage.title).to.equal('My Store');
+        expect(HomePage.readSignInButtonText).to.equal('Sign in');
         HomePage.signInButton.click();
     });
     
@@ -33,7 +34,8 @@ describe('Account creation', () => {
     });
 
     it('verifies the customer name on the My Account page', () => { 
-        expect(MyAccountPage.pageHeading).to.equal('MY ACCOUNT');
+        MyAccountPage.pageHeading.waitForExist();
+        expect(MyAccountPage.readPageHeading).to.equal('MY ACCOUNT');
         expect(MyAccountPage.customerName).to.equal('Joe Doe');
     });    
 });

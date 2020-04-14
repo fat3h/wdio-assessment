@@ -11,6 +11,10 @@ class HomePage {
         return $('#header > div.nav > div > div > nav > div.header_user_info > a'); 
     }
 
+    get readSignInButtonText() {
+        return this.signInButton.getText();
+    }
+
 }
 
 export default new HomePage();
